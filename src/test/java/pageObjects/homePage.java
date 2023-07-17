@@ -15,6 +15,6 @@ public class homePage extends PageObject {
     public static final Target TRANSFER_FUNDS_BUTTON = Target.the("Transfer Funds Button")
             .locatedBy("//*[@id=\"rightPanel\"]/ul[1]/li[3]/a"); //locator for trnnsfer funds button
 
-   public static final Target WITHDRAW_FUNDS_BUTTON = Target.the("Transfer Funds Button")
+   public static final Target WITHDRAW_FUNDS_BUTTON = Target.the("WithDraw Funds Button")
            .locatedBy("//*[@id=\"rightPanel\"]/ul[1]/li[3]/a"); //locator for withdrawfunds button
 }

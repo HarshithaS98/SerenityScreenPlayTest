@@ -21,7 +21,7 @@ public class loginTests {  //Complete tests
 
     private Actor User = Actor.named("User");
 
-    @Managed
+    @Managed()
     WebDriver isBrowser;
 
     @Before
