@@ -1,8 +1,8 @@
-
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.6.0"
     id("io.freefair.lombok") version "6.1.0"
+
 }
 
 group = "com.yourcompany"
@@ -16,10 +16,13 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC")
 
     // Serenity BDD dependencies
-    implementation("net.serenity-bdd:serenity-core:3.6.12")
-    implementation("net.serenity-bdd:serenity-screenplay:3.6.12")
-    implementation("net.serenity-bdd:serenity-screenplay-webdriver:3.6.12")
-    implementation("net.serenity-bdd:serenity-junit:3.6.12")
+    implementation("net.serenity-bdd:serenity-core:3.9.2") //implementation("net.serenity-bdd:serenity-screenplay:3.9.2")
+
+    implementation("net.serenity-bdd:serenity-screenplay:3.9.2")
+    implementation("net.serenity-bdd:serenity-screenplay-webdriver:3.9.2")
+    implementation("net.serenity-bdd:serenity-junit:3.9.2")
+    testImplementation("net.serenity-bdd:serenity-cucumber:3.9.7")
+
 
     // Selenium WebDriver
     implementation("org.seleniumhq.selenium:selenium-java:4.10.0")
@@ -40,9 +43,13 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-}
+    reports {
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
 }
